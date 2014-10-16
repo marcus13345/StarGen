@@ -30,7 +30,6 @@ public class Main {
                 
                 final int MIN_STAR_SIZE = 20, MAX_STAR_SIZE = 50;
                 
-                
                 for (int y = 0; y < HEIGHT; y++) {
                     for (int x = 0; x < WIDTH; x++) {
 
