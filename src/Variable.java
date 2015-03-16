@@ -6,10 +6,8 @@ import java.util.Formatter;
 import java.util.Scanner;
 
 /**
- * to note, will not work on Mac yet.
- * edit: WILL WORK ON MAC MOTHER FUCKERS
- * 
- * 
+ * helpful little class that creates a string variable that gets saved in application 
+ * data. when you write to it, it gets saved as that file.
  * @author Marcus
  * 
  */
@@ -64,9 +62,8 @@ public class Variable {
 		String str = getValueFromFile();
 		
 		// if we could not load a value from the file
-		// AKA didnt fucking exist.
-		// ORRRRRRR if you were an ass, and forced
-		// the value.
+		// AKA didnt exist.
+		// ORRRRRRR if you forced the value.
 		if (str == null) {
 			this.value = value;
 			saveValue();
@@ -96,9 +93,6 @@ public class Variable {
 			f.format("" + value);
 			f.close();
 		} catch (Exception e) {
-			// if(weArriveHere){
-			// we.are("fucked");
-			// }
 			e.printStackTrace();
 		}
 	}
@@ -115,9 +109,6 @@ public class Variable {
 		try {
 			f.createNewFile();
 		} catch (IOException e) {
-			// if(weArriveHere){
-			// we.are("fucked");
-			// }
 			e.printStackTrace();
 		}
 	}

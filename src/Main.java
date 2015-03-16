@@ -9,9 +9,16 @@ import java.util.Random;
 
 import javax.imageio.ImageIO;
 
+/**
+ * simple little play toy to generate star like backgrounds. planned background
+ * for spacewars.
+ * 
+ * @author mgosselin
+ *
+ */
 public class Main {
     private static Variable nameVar = new Variable("", "name", "0", false);
-    private static int stars = 10;
+    private static int stars = 100;
     private static BufferedImage buffer;
     private static Graphics2D graphics;
     
@@ -19,7 +26,7 @@ public class Main {
         try {
             //while (true) {
                 String name = "" + Integer.parseInt(nameVar.getValue());
-                //nameVar.setValue("" + (Integer.parseInt(nameVar.getValue()) + 1));
+                nameVar.setValue("" + (Integer.parseInt(nameVar.getValue()) + 1));
 
                 Random rand = new Random();
                 buffer = new BufferedImage(1024, 600, 3);
@@ -33,7 +40,7 @@ public class Main {
                 for (int y = 0; y < HEIGHT; y++) {
                     for (int x = 0; x < WIDTH; x++) {
 
-                        int k = rand.nextInt(10);
+                        int k = rand.nextInt(20);
                         int r = 0 + k;
                         int g = 0 + k;
                         int b = 0 + k;
@@ -47,7 +54,7 @@ public class Main {
 
                 	int size = MIN_STAR_SIZE + (int)(Math.random() * (MAX_STAR_SIZE - MIN_STAR_SIZE));
                 	
-                    int r = (int)(Math.random() * 50);
+                    int r = (int)(Math.random() * 100);
                     int g = (int)(Math.random() * 50);
                     int b = (int)(Math.random() * 50);
                     
