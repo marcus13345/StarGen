@@ -24,6 +24,7 @@ public class Main {
     
     public static void main(String[] args) {
         try {
+        	//because who doesnt want infinite stars??
             //while (true) {
                 String name = "" + Integer.parseInt(nameVar.getValue());
                 nameVar.setValue("" + (Integer.parseInt(nameVar.getValue()) + 1));
